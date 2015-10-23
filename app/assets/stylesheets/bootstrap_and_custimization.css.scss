@@ -16,6 +16,10 @@ $btn-primary-bg: #e67e22;
 /*JUMBOTRON*/
 
 $jumbotron-bg: #ecf0f1;
+.jumbotron-text {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
