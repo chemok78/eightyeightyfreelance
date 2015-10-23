@@ -1,5 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+/*TYPOGRAPHY*/
+$font-family-sans-serif: 'Helvetica', sans-serif;
+
 /*NAVBAR*/
 $navbar-inverse-bg: #2c3e50;
+.navbar-brand {
+     font-weight: bold;
+}
 
 /*BUTTONS*/
 
@@ -9,6 +17,7 @@ $btn-primary-bg: #e67e22;
 
 $jumbotron-bg: #ecf0f1;
 
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
  
  /*FOOTER*/
@@ -21,4 +30,8 @@ $jumbotron-bg: #ecf0f1;
      color: #ffffff;
  }
  
+ /*GENERIC LAYOUT*/
  
+.center {
+     text-align: center;
+}
