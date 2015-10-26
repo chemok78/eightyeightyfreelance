@@ -11,6 +11,11 @@
           </button>
           <%= link_to "88Freelance", root_path, class:"navbar-brand" %>
       </div>
+      
+      <%= if freelancer_signed_in? %>
+      
+    <!--If freelancer is signed in, show this navbar -->
+    
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 		            <li class="active"><a href="/">Home</a></li>
@@ -23,6 +28,46 @@
               <%= link_to "LOGIN", "/login", class:"btn btn-primary" %>
           </ul>
         </div><!--/.nav-collapse -->
+        
+      <%= elsif employer_signed_in? %>
+      
+    <!-- If employer is signed in, show this navbar -->
+      
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+		            <li class="active"><a href="/">Home</a></li>
+		            <li><%= link_to "Jobs", "#" %></li>
+		            <li><%= link_to "Freelancers", "#" %></li>
+		            <li><%= link_to "Employers", "#" %></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-btn">
+              <%= link_to "LOGIN", "/login", class:"btn btn-primary" %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      
+      <%= else %>
+      
+      <!-- if not signed in, show this navbar -->
+      
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+		            <li class="active"><a href="/">Home</a></li>
+		            <li><%= link_to "Jobs", "#" %></li>
+		            <li><%= link_to "Freelancers", "#" %></li>
+		            <li><%= link_to "Employers", "#" %></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-btn">
+              <%= link_to "LOGIN", "/login", class:"btn btn-primary" %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      
+      <%= end %>
+        
+        
+        
+        
     </nav>
       
   </div><!--End Navbar-->
