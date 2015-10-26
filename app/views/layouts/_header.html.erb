@@ -12,58 +12,82 @@
           <%= link_to "88Freelance", root_path, class:"navbar-brand" %>
       </div>
       
-      <%= if freelancer_signed_in? %>
+      <% if freelancer_signed_in? %>
       
     <!--If freelancer is signed in, show this navbar -->
     
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 		            <li class="active"><a href="/">Home</a></li>
+		            <li><%= link_to "Dashboard", "#" %></li>
+		            <li><%= link_to "Profile", "#" %></li>
 		            <li><%= link_to "Jobs", "#" %></li>
-		            <li><%= link_to "Freelancers", "#" %></li>
-		            <li><%= link_to "Employers", "#" %></li>
+		            <li><%= link_to "Discussions", "#" %></li>
+		            <li><%= link_to "Tools", "#" %></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-btn">
-              <%= link_to "LOGIN", "/login", class:"btn btn-primary" %>
-          </ul>
-        </div><!--/.nav-collapse -->
+            <div class="dropdown">
+               <a class="dropdown-toggle dropdown-menu-right" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Che
+              <span class="caret"></span>
+              </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><%= link_to "Dashboard", "#" %></li>
+                    <li><%= link_to "Account", "#" %></li>
+                    <li><%= link_to "Change Password", edit_freelancer_password_path %></li>
+                    <li><%= link_to "Logout", destroy_freelancer_session_path, :method => :delete %></li>
+                  </ul>
+              </div><!--/.nav-collapse -->
+        </ul>
         
-      <%= elsif employer_signed_in? %>
+      <% elsif employer_signed_in? %>
       
     <!-- If employer is signed in, show this navbar -->
       
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 		            <li class="active"><a href="/">Home</a></li>
-		            <li><%= link_to "Jobs", "#" %></li>
+		            <li><%= link_to "Dashboard", "#" %></li>
+		            <li><%= link_to "Profile", "#" %></li>
 		            <li><%= link_to "Freelancers", "#" %></li>
-		            <li><%= link_to "Employers", "#" %></li>
+		            <li><%= link_to "Discussions", "#" %></li>
+		            <li><%= link_to "Tools", "#" %></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right navbar-btn">
-              <%= link_to "LOGIN", "/login", class:"btn btn-primary" %>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <ul class="nav navbar-nav navbar-right navbar-btn">
+          <div class="dropdown">
+             <a class="dropdown-toggle dropdown-menu-right" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Che
+            <span class="caret"></span>
+            </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><%= link_to "Dashboard", "#" %></li>
+                  <li><%= link_to "Place Job", "#" %></li>
+                  <li><%= link_to "Change Password", edit_employer_password_path %></li>
+                  <li><%= link_to "Logout", destroy_employer_session_path, :method => :delete %></li>
+                </ul>
+          </div><!--/.nav-collapse -->
+        </ul>
       
-      <%= else %>
+      <% else %>
       
       <!-- if not signed in, show this navbar -->
       
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-		            <li class="active"><a href="/">Home</a></li>
 		            <li><%= link_to "Jobs", "#" %></li>
 		            <li><%= link_to "Freelancers", "#" %></li>
 		            <li><%= link_to "Employers", "#" %></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-btn">
-              <%= link_to "LOGIN", "/login", class:"btn btn-primary" %>
+              <%= link_to "LOGIN Freelancer", new_freelancer_session_path, class:"btn btn-primary" %>
+              <%= link_to "LOGIN Employer", new_employer_session_path, class:"btn btn-primary" %>
           </ul>
         </div><!--/.nav-collapse -->
       
-      <%= end %>
+      <% end %>
         
         
         
