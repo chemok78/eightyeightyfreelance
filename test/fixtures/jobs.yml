@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  place: MyString
+  length: 1
+  function: MyString
+  company: MyString
+  educationlevel: MyString
+  yearsexperience: 1
+  field1: MyString
+  field2: MyString
+  hourlyrate: 1
+  region: MyString
+  field2: MyString
+
+two:
+  description: MyString
+  place: MyString
+  length: 1
+  function: MyString
+  company: MyString
+  educationlevel: MyString
+  yearsexperience: 1
+  field1: MyString
+  field2: MyString
+  hourlyrate: 1
+  region: MyString
+  field2: MyString

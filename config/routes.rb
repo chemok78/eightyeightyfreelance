@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :jobs
   devise_for :employers
   devise_for :freelancers
   root 'pages#home'
