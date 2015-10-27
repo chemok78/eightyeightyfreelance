@@ -17,8 +17,8 @@ $btn-primary-bg: #e67e22;
 
 $jumbotron-bg: #ecf0f1;
 .jumbotron-text {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 @import 'bootstrap-sprockets';
@@ -28,6 +28,8 @@ $jumbotron-bg: #ecf0f1;
  
  footer {
     background-color: #2D3339;
+    padding-top: 5%;
+    padding-bottom: 5%;
  }
  
  #footer-menu {
@@ -38,4 +40,12 @@ $jumbotron-bg: #ecf0f1;
  
 .center {
      text-align: center;
+}
+
+.top-buffer {
+    margin-top:30px;
+}
+
+.bottom-buffer {
+    margin-bottom:30px;
 }

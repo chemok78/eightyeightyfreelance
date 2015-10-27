@@ -10,10 +10,9 @@
 
 	    <div class="row">
 	    	
-	      	<div class="col-md-6 center">
+	      	<div class="col-md-6 center top-buffer">
 	      		<div class="text-center">
-	      			<span class="glyphicon glyphicon-search"></span>
-		      		<%= image_tag("/templates/img/home-icon-zzper.jpg") %>
+	      			<span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 2em"></span>
 		      		<h2>Find a Job</h2>
 		      		<p class="lead">Are you a freelancer looking for a Job?<br class="hidden-xs" />Then this is the place to be!</p>
 					<div class="clearfix">
@@ -28,9 +27,9 @@
 	      	
 	      	<hr class="visible-xs"/>
 	      	
-	      	<div class="col-md-6 center">
+	      	<div class="col-md-6 center top-buffer">
 	      		<div class="text-center">
-		      		<%= image_tag("/templates/img/home-icon-opdrachtgever.jpg") %>
+		      		<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" style="font-size: 2em"></span>
 		      		<h2>Find Talent </h2>
 		      		<p class="lead">Looking for talent? At 88Freelance you will<br class="hidden-xs" />the right people!</p>
 		
@@ -45,9 +44,9 @@
 	      	</div>
     
 		</div>
-		<hr />
+		<hr / class="top-buffer">
       
-      	<div class="row">
+      	<div class="row top-buffer">
 	      	<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 center">
 	      		<h1 class="text-center">New Projects Everyday</h1>	
 	      		<p class="lead text-center">Receive alerts and apply immediately</p>
@@ -57,7 +56,7 @@
 	      		<div class="als-container">
 	      			
 					<div class="als-viewport">
-						<ul class="als-wrapper">
+						<ul class="als-wrapper" style="text-align: left">
 							<li class="als-item"><span class="hidden-xs">15/10</span><span><a href="/opdracht/42902/projectleader-digital-tv-/" title="Projectleader Digital TV ">Projectleader Digital TV </a></span><span style="width: 110px; overflow: hidden;" class="hidden-xs">Amsterdam ..</span></li>
 							<li class="als-item"><span class="hidden-xs">15/10</span><span><a href="/opdracht/42901/inkoopadviseur/" title="Inkoopadviseur">Inkoopadviseur</a></span><span style="width: 110px; overflow: hidden;" class="hidden-xs">Meppel</span></li>
 							<li class="als-item"><span class="hidden-xs">15/10</span><span><a href="/opdracht/42900/video-engineer/" title="Video Engineer">Video Engineer</a></span><span style="width: 110px; overflow: hidden;" class="hidden-xs">Amsterdam ..</span></li>
@@ -77,25 +76,25 @@
     	</div>
 	</div>	 
 	</br>
-	<div class="breakout">
+	<div class="breakout top-buffer">
       	<div class="container-fluid" style="background-color: #F1F1F1">
-	      	<div class="row" >
+	      	<div class="row">
 	      		<h2 class="text-center">Our Partners</h2>
-	      		<div class="col-md-12 col-md-offset-3">
+	      		<div class="col-md-12 col-md-offset-3 bottom-buffer">
 					<hr class="first" />
-						<div class="col-md-1"><%= link_to image_tag("/templates/img/partners/partner-ns.png"), "#", class:"img-responsive" %></div>
-						<div class="col-md-1"><%= link_to image_tag("/templates/img/partners/partner-profielfotograaf.png"), "#", class:"img-responsive" %></div>
-						<div class="col-md-1"><%= link_to image_tag("/templates/img/partners/partner-meeus.png"), "#", class:"img-responsive" %></div>
-						<div class="col-md-1"><%= link_to image_tag("/templates/img/partners/partner-knab.png"), "#", class:"img-responsive" %></div>
-                        <div class="col-md-1"><%= link_to image_tag("/templates/img/partners/partner-easystaff.png"), "#", class:"img-responsive" %></div>
-                        <div class="col-md-1"><%= link_to image_tag("/templates/img/partners/partner-moneymonk.png"), "#", class:"img-responsive" %></div>
+						<div class="col-md-1"><%= link_to image_tag("partner-ns.png"), "#", class:"img-responsive" %></div>
+						<div class="col-md-1"><%= link_to image_tag("partner-profielfotograaf.png"), "#", class:"img-responsive" %></div>
+						<div class="col-md-1"><%= link_to image_tag("partner-meeus.png"), "#", class:"img-responsive" %></div>
+						<div class="col-md-1"><%= link_to image_tag("partner-knab.png"), "#", class:"img-responsive" %></div>
+                        <div class="col-md-1"><%= link_to image_tag("partner-easystaff.png"), "#", class:"img-responsive" %></div>
+                        <div class="col-md-1"><%= link_to image_tag("partner-moneymonk.png"), "#", class:"img-responsive" %></div>
 						</br>
 			    </div>
 			</div>
 		</div>     	
 	</div>
       	
-	<div class="container">
+	<div class="container top-buffer">
 		<div class="row">
       		<div class="col-sm-6 center">
 				<h2 class="text-center">Our Latest News</h2>
@@ -107,7 +106,7 @@
 						<a href="/blog/ledenkorting/781/profielfotodagen-13-en-14-november">Profielfotodagen: 13- en 14 november</a><br />
 						<p class="xsmall"> 1 oktober, 2015</p>
 					</div>
-                <p class="text-left">
+                <p class="text-center">
                     <a class="small" href="/blog/">More News &gt;</a>
                 </p>
 
