@@ -15,7 +15,6 @@
         <th>Employer Email</th>
         <th>Edit</th>
         <th>Del</th>
-        <th colspan="3"></th>
       </tr>
     </thead>
   
@@ -25,7 +24,7 @@
           <td><%= link_to job.function, job %></td>
           <td><%= link_to job.place, job %></td>
           <td><%= link_to job.employer.email, job if job.employer %></td>
-          <% if job.employer == current_employer %>
+          <% if job.employer == current_employer %> <!--Check if current employer is job.employer to see links -->
             <td><%= link_to 'Edit', edit_job_path(job) %></td>
             <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
