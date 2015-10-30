@@ -1,6 +1,7 @@
 <div class="container bottom-buffer">
 
   <p id="notice"><%= notice %></p>
+  
 <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
   <li class="active">Projects</li>
@@ -44,8 +45,13 @@
   <% if employer_signed_in? %>  
   <%= link_to 'New Job', new_job_path, class:"btn btn-primary" %>
   <% end %>
+  
+  <div class="center">
+    <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+  </div>
 
 </div>
 
 </div>
+
 

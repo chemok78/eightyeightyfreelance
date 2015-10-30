@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   before_action :authenticate_employer!, except: [:index, :show] #Authenticate employer signed in before able to make edits (Not the right employer yet, just signed in or not / can still see the links in the views)
 
   def index
-    @jobs = Job.all.order("created_at DESC")
+    @jobs = Job.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
   def show

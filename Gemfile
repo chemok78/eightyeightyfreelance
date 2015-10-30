@@ -10,6 +10,8 @@ gem 'bootstrap-sass'
 gem 'turbolinks'
 gem 'devise', '~> 3.4.0'
 gem 'paperclip', '~> 4.2'
+gem 'will_paginate', '~> 3.0.5'
+gem 'will_paginate-bootstrap'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
