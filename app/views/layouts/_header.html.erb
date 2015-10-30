@@ -21,7 +21,7 @@
 		            <li class="active"><a href="/">Home</a></li>
 		            <li><%= link_to "Dashboard", "#" %></li>
 		            <li><%= link_to "Profile", "#" %></li>
-		            <li><%= link_to "Jobs", "#" %></li>
+		            <li><%= link_to "Jobs", jobs_path %></li>
 		            <li><%= link_to "Discussions", "#" %></li>
 		            <li><%= link_to "Tools", "#" %></li>
           </ul>
@@ -49,6 +49,7 @@
           <ul class="nav navbar-nav">
 		            <li class="active"><a href="/">Home</a></li>
 		            <li><%= link_to "Dashboard", "#" %></li>
+		            <li><%= link_to "My Jobs", "#" %></li>
 		            <li><%= link_to "Profile", "#" %></li>
 		            <li><%= link_to "Freelancers", "#" %></li>
 		            <li><%= link_to "Discussions", "#" %></li>
@@ -63,7 +64,7 @@
             </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                   <li><%= link_to "Dashboard", "#" %></li>
-                  <li><%= link_to "Place Job", "#" %></li>
+                  <li><%= link_to "Place Job", new_job_path %></li>
                   <li><%= link_to "Change Password", edit_employer_password_path %></li>
                   <li><%= link_to "Logout", destroy_employer_session_path, method: :delete %></li>
                 </ul>
@@ -76,7 +77,7 @@
       
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-		            <li><%= link_to "Jobs", "#" %></li>
+		            <li><%= link_to "Jobs", jobs_path %></li>
 		            <li><%= link_to "Freelancers", "#" %></li>
 		            <li><%= link_to "Employers", "#" %></li>
           </ul>

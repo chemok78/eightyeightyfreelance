@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_employer!, except: [:index, :show]
 
   def index
     @jobs = Job.all
@@ -9,14 +10,14 @@ class JobsController < ApplicationController
   end
 
   def new
-    @job = Job.new
+    @job = current_employer.jobs.build
   end
 
   def edit
   end
 
   def create
-    @job = Job.new(job_params)
+    @job = current_employer.jobs.build(job_params)
       if @job.save
         redirect_to @job, notice: 'Job was successfully created.' 
       else
