@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   before_action :authenticate_employer!, except: [:index, :show] #Authenticate employer signed in before able to make edits (Not the right employer yet, just signed in or not / can still see the links in the views)
 
   def index
-    @jobs = Job.all
+    @jobs = Job.all.order("created_at DESC")
   end
 
   def show
@@ -52,6 +52,6 @@ class JobsController < ApplicationController
 
     
     def job_params
-      params.require(:job).permit(:description, :place, :length, :function, :company, :educationlevel, :yearsexperience, :field1, :field2, :hourlyrate, :region, :field2)
+      params.require(:job).permit(:description, :place, :length, :function, :company, :educationlevel, :yearsexperience, :field1, :field2, :hourlyrate, :region, :field2, :image)
     end
 end

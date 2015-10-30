@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029083202) do
+ActiveRecord::Schema.define(version: 20151030073318) do
 
   create_table "employers", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -61,9 +61,13 @@ ActiveRecord::Schema.define(version: 20151029083202) do
     t.string   "field2"
     t.integer  "hourlyrate"
     t.string   "region"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "employer_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "jobs", ["employer_id"], name: "index_jobs_on_employer_id"

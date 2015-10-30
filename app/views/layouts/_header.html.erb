@@ -64,7 +64,10 @@
             </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                   <li><%= link_to "Dashboard", "#" %></li>
-                  <li><%= link_to "Place Job", new_job_path %></li>
+                  <li><%= link_to new_job_path do %>
+                    <span class="glyphicon glyphicon-plus"></span>Place Job
+                  <% end %>
+                  </li>
                   <li><%= link_to "Change Password", edit_employer_password_path %></li>
                   <li><%= link_to "Logout", destroy_employer_session_path, method: :delete %></li>
                 </ul>
