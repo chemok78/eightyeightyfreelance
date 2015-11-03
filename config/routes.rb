@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :jobs
   devise_for :employers
-  devise_for :freelancers
+  devise_for :freelancers, :controllers => { registrations: 'registrations' }
   root 'pages#home'
   
   get "how" => "pages#how"

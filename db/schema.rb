@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102111230) do
+ActiveRecord::Schema.define(version: 20151103085709) do
 
   create_table "employers", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 20151102111230) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "last_name"
+    t.string   "gender"
+    t.string   "first_name"
+    t.string   "street_name"
+    t.integer  "house_number"
+    t.integer  "postal_code"
+    t.string   "city"
+    t.string   "region"
+    t.integer  "phone"
+    t.string   "profession"
+    t.boolean  "terms_of_service"
   end
 
   add_index "freelancers", ["email"], name: "index_freelancers_on_email", unique: true
