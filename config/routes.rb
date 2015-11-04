@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :jobs
-  devise_for :employers
+  devise_for :employers, :controllers => { registrations: 'registrations' }
   devise_for :freelancers, :controllers => { registrations: 'registrations' }
   root 'pages#home'
   
