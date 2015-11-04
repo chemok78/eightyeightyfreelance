@@ -1,0 +1,52 @@
+<div class="container">
+  
+  <p id="notice"><%= notice %></p>
+  
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+    
+      <div class="panel panel-default">
+        
+      <div class="panel-heading">
+       
+       <p>
+          <%= @freelancer.profession %>
+        </p>
+        
+      </div>
+        
+    
+        <div class="panel-body">
+          
+        <p>
+          <strong>First Name:</strong>
+          <%= @freelancer.first_name %>
+        </p>
+        
+        <p>
+          <strong>Last Name:</strong>
+          <%= @freelancer.last_name %>
+        </p>
+        
+        <p>
+          <strong>Profession:</strong>
+          <%= @freelancer.profession %>
+        </p>
+        
+        </div>
+      
+        <div class="panel-footer">
+      
+      <% if @freelancer == current_freelancer %>
+        <%= link_to 'Edit', edit_freelancer_registration_path %> 
+      <% end %>
+
+        </div>
+      
+      </div>
+  
+    </div>
+  
+  </div><!--close row div-->
+
+</div>
