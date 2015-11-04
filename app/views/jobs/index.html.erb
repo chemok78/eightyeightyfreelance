@@ -17,7 +17,7 @@
       <tr>
         <th>Function</th>
         <th>Place</th>
-        <th>Employer Email</th>
+        <th>Employer</th>
         <th>Edit</th>
         <th>Del</th>
       </tr>
@@ -28,7 +28,7 @@
         <tr>
           <td><%= link_to job.job_title, job %></td>
           <td><%= link_to job.city, job %></td>
-          <td><%= link_to job.employer.company_name, job if job.employer %></td>
+          <td><%= link_to job.employer.company_name, job if job.employer.company_name %></td>
           <% if job.employer == current_employer %> <!--Check if current employer is job.employer to see links -->
           <div class="actions">
             <td><%= link_to 'Edit', edit_job_path(job) %></td>
