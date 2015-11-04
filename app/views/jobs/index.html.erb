@@ -26,9 +26,9 @@
     <tbody>
       <% @jobs.each do |job| %>
         <tr>
-          <td><%= link_to job.function, job %></td>
-          <td><%= link_to job.place, job %></td>
-          <td><%= link_to job.employer.email, job if job.employer %></td>
+          <td><%= link_to job.job_title, job %></td>
+          <td><%= link_to job.city, job %></td>
+          <td><%= link_to job.employer.company_name, job if job.employer %></td>
           <% if job.employer == current_employer %> <!--Check if current employer is job.employer to see links -->
           <div class="actions">
             <td><%= link_to 'Edit', edit_job_path(job) %></td>
@@ -47,7 +47,7 @@
   <% end %>
   
   <div class="center">
-    <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
   </div>
 
 </div>

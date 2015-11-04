@@ -18,5 +18,4 @@ class Employer < ActiveRecord::Base
   validates :last_name, presence: true
   validates :terms_of_service, :acceptance => {:accept => true}
   
-  
 end

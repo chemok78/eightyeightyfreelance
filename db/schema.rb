@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103152535) do
+ActiveRecord::Schema.define(version: 20151104082621) do
 
   create_table "employers", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -73,15 +73,15 @@ ActiveRecord::Schema.define(version: 20151103152535) do
 
   create_table "jobs", force: :cascade do |t|
     t.string   "description"
-    t.string   "place"
+    t.string   "city"
     t.integer  "length"
-    t.string   "function"
+    t.string   "job_title"
     t.string   "company"
-    t.string   "educationlevel"
-    t.integer  "yearsexperience"
-    t.string   "field1"
-    t.string   "field2"
-    t.integer  "hourlyrate"
+    t.string   "education_level"
+    t.string   "years_experience"
+    t.string   "business_field1"
+    t.string   "business_field2"
+    t.string   "hourly_rate"
     t.string   "region"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 20151103152535) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.date     "project_length"
   end
 
   add_index "jobs", ["employer_id"], name: "index_jobs_on_employer_id"

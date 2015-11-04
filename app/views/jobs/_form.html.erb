@@ -13,38 +13,40 @@
   
   <div class="form-group">
     
-    <%= f.label :image %><br>
-    <%= f.file_field :image, class:"form-control"%><br>
+    <%= f.label :image %>
+    <%= f.file_field :image, class:"form-control"%></br>
 
-    <%= f.label :function %><br>
-    <%= f.text_field :function, class:"form-control"%><br>
+    <%= f.label :job_title, "Job Title*" %>
+    <%= f.text_field :job_title, class:"form-control"%>
 
-    <%= f.label :description %><br>
+    <%= f.label :description, "Description*" %>
     <%= f.text_area :description, class:"form-control", rows: 10 %><br>
 
-    <%= f.label :educationlevel %><br>
-    <%= f.select(:educationlevel, ['MBO', 'HBO', 'WO'], {}, { :class => 'form-control' }) %></br>
+    <%= f.label :education_level, "Education Level*" %>
+    <%= f.select(:education_level, ['MBO', 'HBO', 'WO'], {}, { :class => 'form-control' }) %></br>
     
-    <%= f.label :yearsexperience %><br>
-    <%= f.select(:yearsexperience, ['No experience', '< 1 year', '1 year', '2 year', '3 year', '4 year', '5 year', '> 5 year'], {}, { :class => 'form-control' }) %></br>
+    <%= f.label :years_experience, "Years Experience*" %>
+    <%= f.select(:years_experience, ['No experience', '< 1 year', '1 year', '2 year', '3 year', '4 year', '5 year', '> 5 year'], {}, { :class => 'form-control' }) %></br>
  
-    <%= f.label :field1 %><br>
-    <%= f.text_field :field1, class:"form-control" %><br>
+    <%= f.label :business_field1, "Business Field 1*" %>
+    <%= f.text_field :business_field1, class:"form-control" %><br>
   
-    <%= f.label :field2 %><br>
-    <%= f.text_field :field2, class:"form-control" %><br>
+    <%= f.label :business_field2, "Business Field 2" %>
+    <%= f.text_field :business_field2, class:"form-control" %><br>
     
-    <%= f.label :region %><br>
+    <%= f.label :region, "Region*" %>
     <%= f.text_field :region, class:"form-control" %><br>
     
-    <%= f.label :hourlyrate %><br>
-    <%= f.select(:hourlyrate, ['To be discussed', 'Less than 400 HKD', '400 to 500 HKD', '500 to 600 HKD', '600 to 700 HKD', '700 to 800 HKD', '800 to 900 HKD', '900 to 1000 HKD', '1000 to 1200 HKD', 'More than 1200 HKD'], {}, { :class => 'form-control' }) %></br>
+    <%= f.label :hourly_rate, "Hourly Rate*" %>
+    <%= f.select(:hourly_rate, ['To be discussed', 'Less than 400 HKD', '400 to 500 HKD', '500 to 600 HKD', '600 to 700 HKD', '700 to 800 HKD', '800 to 900 HKD', '900 to 1000 HKD', '1000 to 1200 HKD', 'More than 1200 HKD'], {}, { :class => 'form-control' }) %></br>
 
-    <%= f.label :place %><br>
-    <%= f.text_field :place, class:"form-control" %><br>
-
-    <%= f.label :length %><br>
-    <%= f.number_field :length, class:"form-control" %><br>
+    <%= f.label :city, "City*" %>
+    <%= f.text_field :city, class:"form-control" %><br>
+    
+    <%= f.label :project_length, "Closing Date Project*" %>
+    <%= f.date_select :project_length, class:"form-control" %><br>
+    
+    </br>
   
     <%= f.submit "Send", class:"btn btn-primary"%><br>
     
